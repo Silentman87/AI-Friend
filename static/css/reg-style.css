@@ -275,7 +275,7 @@ span:hover {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
   text-decoration: none;
-   color: #ffffff;
+   color:  black;
 }
 
 @media (max-width: 768px) {
