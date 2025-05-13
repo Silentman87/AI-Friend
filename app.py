@@ -21,7 +21,7 @@ app = Flask(__name__)
 
 load_dotenv()
 
-PINECONE_API_KEY = os.environ.get('PineConeApi')
+PINECONE_API_KEY = os.environ.get('PINECONE_API_KEY')
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
 HUGGINGFACE_API_KEY = os.environ.get('HUGGINGFACE_API_KEY')
 GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
