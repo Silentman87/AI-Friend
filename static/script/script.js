@@ -35,7 +35,7 @@ async function generateResponse(aiChatBox) {
     };
 
     try {
-        const response = await fetch(API_URL, requestOptions);
+        const response = await fetch('\chat', requestOptions);
         const data = await response.json();
         // Check if the response contains an error
         if (data.error) {

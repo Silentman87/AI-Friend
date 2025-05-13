@@ -1,0 +1,8 @@
+setup.py
+AI_Friend.egg-info/PKG-INFO
+AI_Friend.egg-info/SOURCES.txt
+AI_Friend.egg-info/dependency_links.txt
+AI_Friend.egg-info/top_level.txt
+src/__init__.py
+src/helper.py
+src/prompt.py

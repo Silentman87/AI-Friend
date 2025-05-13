@@ -1,0 +1,10 @@
+
+# Ignore environment variables file
+.env
+
+
+# Ignore specific directories and their contents
+t5_spiritual_guru/
+dataset/
+raw_data/
+research/
