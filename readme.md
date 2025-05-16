@@ -1,6 +1,6 @@
 # 🤖 AI Friend – Your Emotional & Wellness Companion
 
-AI Friend is a smart, web-based chatbot built to offer **emotional support** and **wellness guidance** in a friendly, conversational manner. It uses **Meta's Gemma 2B model** powered by **prompt engineering** to generate empathetic, human-like responses, making mental wellness support more accessible.
+AI Friend is a smart, web-based chatbot built to offer **emotional support** and **wellness guidance** in a friendly, conversational manner. It uses LangChain with RAG to retrieve information from trusted medical sources like *The Gale Encyclopedia of Medicine*, and responds using the Groq API with the llama3 (70B) language model. The system features secure user authentication, a modern web interface, and empathetic, human-like conversations.
 
 ---
 
