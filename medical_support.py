@@ -1,3 +1,14 @@
+#############################################################################
+#                      AI-Friend | Ai-powered health &                      #
+#                          emotional support chatbot                        #
+#                                                                           #
+#                                                                           #             
+#                                                                           #
+#                    ------For Research Purpose------                       #
+#############################################################################
+
+
+
 def get_cdc_answer(question, api_key):
     url = "https://api.cdc.gov/api/v2/COVID-19/answers"
     params = {

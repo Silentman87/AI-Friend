@@ -1,3 +1,14 @@
+#############################################################################
+#                      AI-Friend | Ai-powered health &                      #
+#                          emotional support chatbot                        #
+#                                                                           #
+#                                                                           #             
+#                                                                           #
+#                    ------For Research Purpose------                       #
+#############################################################################
+
+
+
 import pandas as pd
 import re
 import spacy

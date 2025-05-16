@@ -1,3 +1,15 @@
+#############################################################################
+#                      AI-Friend | Ai-powered health &                      #
+#                          emotional support chatbot                        #
+#                                                                           #
+#                                                                           #             
+#                                                                           #
+#                    ------For Research Purpose------                       #
+#############################################################################
+
+
+
+
 from flask import Flask, request, jsonify
 import logging
 import requests

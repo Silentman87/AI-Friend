@@ -1,3 +1,13 @@
+#############################################################################
+#                      AI-Friend | Ai-powered health &                      #
+#                          emotional support chatbot                        #
+#                                                                           #
+#                                                                           #             
+#                                                                           #
+#                    ------For Research Purpose------                       #
+#############################################################################
+
+
 from datasets import load_dataset
 import pandas as pd
 

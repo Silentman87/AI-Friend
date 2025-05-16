@@ -1,3 +1,19 @@
+#############################################################################
+#                      AI-Friend | Ai-powered health &                      #
+#                          emotional support chatbot                        #
+#                                                                           #
+#                                                                           #             
+#                                                                           #
+#                    ------For Research Purpose------                       #
+#############################################################################
+
+
+#############################################################################
+#  Importing library
+#
+#############################################################################
+
+
 from transformers import T5ForConditionalGeneration, T5Tokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer
 from datasets import Dataset, load_dataset
 from peft import LoraConfig, get_peft_model

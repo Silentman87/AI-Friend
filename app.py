@@ -1,3 +1,16 @@
+#############################################################################
+#                      AI-Friend | Ai-powered health &                      #
+#                          emotional support chatbot                        #
+#                                                                           #             
+#                                                                           #
+#############################################################################
+
+
+#############################################################################
+#  Importing library
+#
+#############################################################################
+
 from flask import Flask, render_template, redirect, url_for, request, flash, Response
 import flask
 from requests import session
@@ -19,6 +32,12 @@ import os
 
 app = Flask(__name__)
 
+#############################################################################
+#  setting the environment variables
+#
+#############################################################################
+
+
 load_dotenv()
 
 PINECONE_API_KEY = os.environ.get('PINECONE_API_KEY')
@@ -32,7 +51,17 @@ os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 os.environ["HUGGINGFACE_API_KEY"] = HUGGINGFACE_API_KEY
 
 
+#############################################################################
+#  Download the embedding model
+#
+#############################################################################
+
 embeddings = download_hugging_face_embeddings()
+
+#############################################################################
+#  Extracting the data from Pinecone vector DB
+#
+#############################################################################
 
 index_name = "aifriend"
 # Embed each chunk and upsert the embeddings into your Pinecone index.
@@ -43,6 +72,10 @@ docsearch = PineconeVectorStore.from_existing_index(
 
 retriever = docsearch.as_retriever(search_type = "similarity", search_kwargs={"k":3})
 
+#############################################################################
+#  Load the large language model using groq api
+#
+#############################################################################
 llm = ChatGroq(model="llama3-70b-8192", temperature=0.5, max_tokens=500)
 prompt = ChatPromptTemplate.from_messages(
     [
@@ -52,10 +85,19 @@ prompt = ChatPromptTemplate.from_messages(
 )
 
 
+#############################################################################
+#  Creating a chain
+#
+#############################################################################
+
 question_answer_chain = create_stuff_documents_chain(llm, prompt)
 rag_chain = create_retrieval_chain(retriever, question_answer_chain)
 
 
+#############################################################################
+#  Setting up the routes
+#
+#############################################################################
 
 @app.route('/', methods = ['GET', 'POST'])
 def login():
@@ -91,9 +133,11 @@ def chat() :
     if not data or "message" not in data or "type" not in data:
         return jsonify({"error": "No message provided"}), 400
     
+    # for friend mode 
     
     if data["type"] == "friend":
         try:
+            # direct pass to the llm for input generation
             response = llm([
                 SystemMessage(content=friend_prompt),
                 HumanMessage(content=message)
@@ -104,8 +148,10 @@ def chat() :
             print("LLM Error (friend):", str(e))
             return jsonify({"error": "Sorry yaar, kuch gadbad ho gayi. Try again later."}), 500
 
+    # for health-guide mode
     elif data["type"] == "health-guide":
         try:
+            # first pass to the rag_chain() for input generation
             response = rag_chain.invoke({"input": message})
             print("Health response:", response["answer"])
             return jsonify({"response": response["answer"]})
@@ -116,4 +162,4 @@ def chat() :
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port, debug = True)
