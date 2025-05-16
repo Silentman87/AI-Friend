@@ -15,7 +15,7 @@ AI Friend is a smart, web-based chatbot built to offer **emotional support** and
 - 🔗 **LangChain Integration**  
   Enables real-time document retrieval and context-aware interactions.
 
-- ⚡ **Groq API with Gemma 2B Model**  
+- ⚡ **Groq API with LLaMA 2 (70B)**  
   Utilizes ultra-fast LLM responses for seamless conversations.
 
 - 🔐 **Firebase Authentication**  
