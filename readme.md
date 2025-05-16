@@ -6,12 +6,32 @@ AI Friend is a smart, web-based chatbot built to offer **emotional support** and
 
 ## 🚀 Features
 
-- 🧠 **Conversational AI** trained to provide emotional and wellness support
-- 🔐 **Firebase Authentication** for secure user login and registration
-- 🌐 **Modern Frontend** using HTML, CSS, and JavaScript
-- ⚙️ **Flask API Backend** to communicate with the Gemma 2B model
-- 🎯 **Prompt Engineering** to fine-tune tone and ensure human-like empathy
-- 📱 **Responsive Web Interface** for all devices
+- 🧠 **Conversational AI**  
+  Offers emotional and wellness support using LangChain with Retrieval-Augmented Generation (RAG).
+
+- 📚 **Domain-Specific Knowledge Base**  
+  Integrated with *The Gale Encyclopedia of Medicine* to deliver accurate health and wellness responses.
+
+- 🔗 **LangChain Integration**  
+  Enables real-time document retrieval and context-aware interactions.
+
+- ⚡ **Groq API with Gemma 2B Model**  
+  Utilizes ultra-fast LLM responses for seamless conversations.
+
+- 🔐 **Firebase Authentication**  
+  Secures user login and registration processes.
+
+- 🌐 **Modern Frontend**  
+  Built using HTML, CSS, and JavaScript for a clean and interactive user experience.
+
+- ⚙️ **Flask Backend API**  
+  Manages user queries and serves AI-generated responses efficiently.
+
+- 🎯 **Prompt Engineering**  
+  Ensures responses are aligned with human-like empathy and tone.
+
+- 📱 **Responsive Web Interface**  
+  Fully optimized for use on desktops, tablets, and mobile devices.
 
 ---
 
@@ -23,6 +43,7 @@ AI Friend is a smart, web-based chatbot built to offer **emotional support** and
 | Backend      | Python (Flask)           |
 | AI Model     | Meta Gemma 2B API        |
 | Auth System  | Firebase Authentication  |
+| Deployment   | Render                   |
 
 ---
 
@@ -50,12 +71,19 @@ AI Friend is a smart, web-based chatbot built to offer **emotional support** and
 
 ---
 
-## 🧪 Prompt Engineering
+## How It Works
 
-This project leverages **custom-engineered prompts** to steer the tone of the Gemma 2B model toward **compassion, empathy, and wellness-focused responses**.
+**AI Friend** is a smart mental wellness assistant that uses advanced AI to provide empathetic, health-focused support.
 
-Example Prompt:
-> *"You are a friendly emotional support companion. Respond kindly and helpfully to the following message:"*
+- **Input Understanding:** Processes user queries with NLP techniques like sentiment analysis, emotion detection, and intent recognition.
+- **Knowledge Retrieval:** Uses **Pinecone** vector database to find relevant info from trusted medical sources, including *The Gale Encyclopedia of Medicine*.
+- **Orchestration:** **LangChain** manages retrieval, context, and memory flow for smooth conversations.
+- **Response Generation:** Sends context to **LLaMA 2 (70B)** via **Groq’s fast LLM API** for accurate, timely, and nuanced replies.
+- **Output:** Delivers supportive, personalized advice, wellness tips, and motivation.
+
+**AI Friend** is free, scalable, and secure, with planned features like voice interaction, mood analysis, and real-time coping tools.
+
+
 
 ---
 
@@ -67,7 +95,13 @@ Example Prompt:
 
 ## 📸 Screenshots
 
-*(Insert screenshots of your chatbot interface here)*
+![Home page](screenshots/Screenshot%202025-05-17%20015738.png)
+![Home page](screenshots/Screenshot%202025-05-17%20015752.png)
+![Home page](screenshots/Screenshot%202025-05-17%20015808.png)
+![Home page](screenshots/Screenshot%202025-05-17%20015817.png)
+![Home page](screenshots/Screenshot%202025-05-17%20015828.png)
+![Home page](screenshots/Screenshot%202025-05-17%20020513.png)
+
 
 ---
 
