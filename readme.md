@@ -1,4 +1,4 @@
-# 🤖 AI Friend – Your Emotional & Wellness Companion
+# 🤖 AI Friend – Your Emotional & Wellness Companion | [LIVE Demo](https://ai-friend-jm16.onrender.com)
 
 AI Friend is a smart, web-based chatbot built to offer **emotional support** and **wellness guidance** in a friendly, conversational manner. It uses LangChain with RAG to retrieve information from trusted medical sources like *The Gale Encyclopedia of Medicine*, and responds using the Groq API with the llama3 (70B) language model. The system features secure user authentication, a modern web interface, and empathetic, human-like conversations.
 
