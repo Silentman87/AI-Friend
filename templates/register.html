@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/message.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/reg-style.css') }}"/>
-    <title>Register & Login</title>
-  </head>
-  <body>
-      <!-- Navbar -->
-<div class="navbar">
-  <div class="logo">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/message.png') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/reg-style.css') }}" />
+  <title>Register & Login</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
       <img class="logo-img" src="{{ url_for('static', filename='images/message.png') }}"></img>
-      <a href="/" class="nav__logo" >AI Friend</a>
-  </div>
-   </div class="main">
-    <div class="container">
-      <!-- Left Side (Image/Banner) -->
-      <div class="banner">
-        <img src="{{ url_for('static', filename = 'images/banner.png') }}" alt="Welcome" />
-      </div>
-
-      <!-- Right Side (Form) -->
-      <div class="form-container">
-       <!-- Register Form -->
-<form id="register-form" class="form active">
-  <h2>Sign Up</h2>
-  <input id="register-name" type="text" placeholder="Full Name" required />
-  <input id="register-email" type="email" placeholder="Email" required />
-  <input id="register-password" type="password" placeholder="Password" required />
-  <button type="submit">Register</button>
-  <button id="register-google-btn" class="google-btn">
-    <img src="{{ url_for('static', filename = 'images/google.png') }}" alt="Google logo" />
-    Sign in with Google
-  </button>
-  <p>
-    Already have an account? <span id="toggle-to-login">Sign in</span>
-  </p>
-</form>
-
-<!-- Login Form -->
-<form id="login-form" class="form">
-  <h2>Sign in</h2>
-  <input id="login-email" type="email" placeholder="Email" required />
-  <input id="login-password" type="password" placeholder="Password" required />
-  <button type="submit">Login</button>
-  <button id="login-google-btn" class="google-btn">
-    <img src="{{ url_for('static', filename = 'images/google.png') }}" alt="Google logo" />
-    Sign in with Google
-  </button>
-  <p>
-    Don't have an account? <span id="toggle-to-register">Sign up</span>
-  </p>
-</form>
-
-      </div>
+      <a href="/" class="nav__logo">AI Friend</a>
+    </div>
+  </div class="main">
+  <div class="container">
+    <!-- Left Side (Image/Banner) -->
+    <div class="banner">
+      <img src="{{ url_for('static', filename = 'images/banner.png') }}" alt="Welcome" />
     </div>
 
-    
-    <script src="{{ url_for('static', filename = 'script/firebase-auth.js') }}" type="module"  defer></script>
-  </body>
+    <!-- Right Side (Form) -->
+    <div class="form-container">
+      <!-- Register Form -->
+      <form id="register-form" class="form active">
+        <h2>Sign Up</h2>
+        <input id="register-name" type="text" placeholder="Full Name" required />
+        <input id="register-email" type="email" placeholder="Email" required />
+        <input id="register-password" type="password" placeholder="Password" required />
+        <button type="submit">Register</button>
+        <button id="register-google-btn" class="google-btn">
+          <img src="{{ url_for('static', filename = 'images/google.png') }}" alt="Google logo" />
+          Sign in with Google
+        </button>
+        <p>
+          Already have an account? <span id="toggle-to-login">Sign in</span>
+        </p>
+      </form>
+
+      <!-- Login Form -->
+      <form id="login-form" class="form">
+        <h2>Sign in</h2>
+        <input id="login-email" type="email" placeholder="Email" required />
+        <input id="login-password" type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+        <button id="login-google-btn" class="google-btn">
+          <img src="{{ url_for('static', filename = 'images/google.png') }}" alt="Google logo" />
+          Sign in with Google
+        </button>
+        <p>
+          Don't have an account? <span id="toggle-to-register">Sign up</span>
+        </p>
+      </form>
+
+    </div>
+  </div>
+
+
+  <script src="{{ url_for('static', filename = 'script/firebase-auth.js') }}" type="module" defer></script>
+</body>
+
 </html>

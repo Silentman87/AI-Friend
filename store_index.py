@@ -1,7 +1,7 @@
 #############################################################################
 #                      AI-Friend | Ai-powered health &                      #
 #                          emotional support chatbot                        #
-#                                                                           #             
+#                                                                           #
 #                                                                           #
 #############################################################################
 
@@ -20,7 +20,6 @@ from dotenv import load_dotenv
 import os
 
 
-
 #############################################################################
 #  setting the environment variables
 #
@@ -33,15 +32,14 @@ os.environ['PINECONE_API_KEY'] = PINECONE_API_KEY
 
 
 #############################################################################
-#  Load the pdf 
+#  Load the pdf
 #  Split it into chunks
 #  Download the embedding model
 #############################################################################
 
-extracted_data = load_pdf_file(data = 'dataset/')
+extracted_data = load_pdf_file(data='dataset/')
 text_chunks = text_split(extracted_data)
 embeddings = download_hugging_face_embeddings()
-
 
 
 #############################################################################
@@ -54,10 +52,10 @@ pc = Pinecone(api_key=PINECONE_API_KEY)
 index_name = "aifriend"
 
 pc.create_index(
-    name = index_name,
+    name=index_name,
     dimension=384,
     metric="cosine",
-    spec = ServerlessSpec(
+    spec=ServerlessSpec(
         cloud="aws",
         region="us-east-1"
     )
@@ -70,9 +68,6 @@ pc.create_index(
 
 docsearch = PineconeVectorStore.from_documents(
     documents=text_chunks,
-    index_name = index_name,
+    index_name=index_name,
     embedding=embeddings,
 )
-
-
-

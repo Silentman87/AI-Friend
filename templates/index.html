@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,11 +41,11 @@
                         <a href="#contact" class="nav__link">Contact us</a>
                     </li>
 
-                    <i class='bx bx-toggle-left change-theme' id="theme-button" ></i>
+                    <i class='bx bx-toggle-left change-theme' id="theme-button"></i>
                     <a href="{{ url_for('register') }}" class="btn-link">
                         <button class="btn">Sign Up</button>
                     </a>
-                    
+
                 </ul>
             </div>
 
@@ -62,16 +61,19 @@
         <!--=============== HOME ===============-->
         <section class="home section container" id="home">
             <div class="home__container  grid">
-                
+
 
                 <div class="home__data">
                     <h1 class="home__title">Chat with AI Friend</h1>
-                    <p class="home__description">AI Friend is a smart chatbot designed to provide personalized healthcare advice and emotional support, helping you navigate your health and well-being with care and understanding.</p>
+                    <p class="home__description">AI Friend is a smart chatbot designed to provide personalized
+                        healthcare advice and emotional support, helping you navigate your health and well-being with
+                        care and understanding.</p>
 
-                   
+
 
                 </div>
-                <video src="{{ url_for('static', filename='images/vedio_for_project.mp4') }}" controls height="100%" width="100%" autoplay muted loop> </video>
+                <video src="{{ url_for('static', filename='images/vedio_for_project.mp4') }}" controls height="100%"
+                    width="100%" autoplay muted loop> </video>
             </div>
         </section>
 
@@ -81,21 +83,27 @@
             <div class="services__container grid">
                 <div class="services__data">
                     <h3 class="services__subtitle" id="service-subtitle1">Empower Your Mind, Brighten Your Life</h3>
-                    <img class="services__img" src="{{ url_for('static', filename='images/open-mind.png') }}" height="30px" width="30px" id="service-img1"></img>
-                    <p class="services__description" id="service-text1">Curated uplifting quotes to inspire and encourage users.</p>
-                        .</p>
+                    <img class="services__img" src="{{ url_for('static', filename='images/open-mind.png') }}"
+                        height="30px" width="30px" id="service-img1"></img>
+                    <p class="services__description" id="service-text1">Curated uplifting quotes to inspire and
+                        encourage users.</p>
+                    .</p>
                 </div>
 
                 <div class="services__data">
                     <h3 class="services__subtitle">Deep Mind Insights & Awareness</h3>
-                    <img class="services__img" src="{{ url_for('static', filename='images/deep.png') }}" height="100%" width="100%"></img>
-                    <p class="services__description">Psychological concepts, coping strategies, APA-based research data.</p>
+                    <img class="services__img" src="{{ url_for('static', filename='images/deep.png') }}" height="100%"
+                        width="100%"></img>
+                    <p class="services__description">Psychological concepts, coping strategies, APA-based research data.
+                    </p>
                 </div>
 
                 <div class="services__data">
                     <h3 class="services__subtitle">Understanding & Compassionate Support</h3>
-                    <img class="services__img" src="{{ url_for('static', filename='images/chatbot.png') }}" height="100%" width="100%"></img>
-                    <p class="services__description">Empathetic communication to build trust and understanding with users.</p>
+                    <img class="services__img" src="{{ url_for('static', filename='images/chatbot.png') }}"
+                        height="100%" width="100%"></img>
+                    <p class="services__description">Empathetic communication to build trust and understanding with
+                        users.</p>
                 </div>
             </div>
         </section>
@@ -103,9 +111,9 @@
         <!--=============== ABOUT ===============-->
         <section class="about section container" id="how">
             <div class="about__container grid">
-                <svg xmlns="http://www.w3.org/2000/svg" class="about-img" xmlns:xlink="http://www.w3.org/1999/xlink" width="500"
-                    zoomAndPan="magnify" viewBox="0 0 375 374.999991" height="500" preserveAspectRatio="xMidYMid meet"
-                    version="1.0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="about-img" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="500" zoomAndPan="magnify" viewBox="0 0 375 374.999991" height="500"
+                    preserveAspectRatio="xMidYMid meet" version="1.0">
                     <defs>
                         <clipPath id="e51c937e27">
                             <path d="M 20.148438 32 L 350 32 L 350 337.179688 L 20.148438 337.179688 Z M 20.148438 32 "
@@ -158,27 +166,38 @@
                 </svg>
                 <div class="about__data">
                     <h2 class="section__title-center">How does it work?</h2>
-<p class="about__description">
-  <strong>AI Friend</strong> is a smart mental wellness assistant that offers emotionally supportive and health-aware guidance using advanced AI technologies.
-  <br>
-  It follows a <strong>Retrieval-Augmented Generation (RAG)</strong> architecture to ensure accurate, empathetic responses:
-  <br><br>
-  <strong>1. Understanding User Input:</strong> User queries are processed with NLP techniques like <strong>sentiment analysis</strong>, <strong>emotion detection</strong>, and <strong>intent recognition</strong>.
-  <br><br>
-  <strong>2. Smart Retrieval with Pinecone:</strong> Input is embedded and matched against medical and wellness content (including <em><strong>The Gale Encyclopedia of Medicine</strong></em>) using <strong>Pinecone</strong> for fast vector search.
-  <br><br>
-  <strong>3. LangChain Logic:</strong> <strong>LangChain</strong> manages context retrieval, prompt injection, and memory flow to connect user intent with the right knowledge.
-  <br><br>
-  <strong>4. Fast, Intelligent Responses via Groq + LLaMA 2 (70B):</strong> The retrieved context is sent to <strong>LLaMA 2 (70B)</strong> through <strong>Groq’s ultra-fast LLM API</strong>, enabling rich and timely responses.
-  <br><br>
-  <strong>5. Empathetic Output:</strong> The AI delivers responses that feel personal and supportive — including wellness tips, health advice, and motivational guidance.
-  <br><br>
-  <strong>AI Friend</strong> is <strong>free, scalable, and secure</strong>, with upcoming features like voice interaction, mood analysis via webcam, and real-time coping tools.
-</p>
+                    <p class="about__description">
+                        <strong>AI Friend</strong> is a smart mental wellness assistant that offers emotionally
+                        supportive and health-aware guidance using advanced AI technologies.
+                        <br>
+                        It follows a <strong>Retrieval-Augmented Generation (RAG)</strong> architecture to ensure
+                        accurate, empathetic responses:
+                        <br><br>
+                        <strong>1. Understanding User Input:</strong> User queries are processed with NLP techniques
+                        like <strong>sentiment analysis</strong>, <strong>emotion detection</strong>, and <strong>intent
+                            recognition</strong>.
+                        <br><br>
+                        <strong>2. Smart Retrieval with Pinecone:</strong> Input is embedded and matched against medical
+                        and wellness content (including <em><strong>The Gale Encyclopedia of Medicine</strong></em>)
+                        using <strong>Pinecone</strong> for fast vector search.
+                        <br><br>
+                        <strong>3. LangChain Logic:</strong> <strong>LangChain</strong> manages context retrieval,
+                        prompt injection, and memory flow to connect user intent with the right knowledge.
+                        <br><br>
+                        <strong>4. Fast, Intelligent Responses via Groq + LLaMA 2 (70B):</strong> The retrieved context
+                        is sent to <strong>LLaMA 2 (70B)</strong> through <strong>Groq’s ultra-fast LLM API</strong>,
+                        enabling rich and timely responses.
+                        <br><br>
+                        <strong>5. Empathetic Output:</strong> The AI delivers responses that feel personal and
+                        supportive — including wellness tips, health advice, and motivational guidance.
+                        <br><br>
+                        <strong>AI Friend</strong> is <strong>free, scalable, and secure</strong>, with upcoming
+                        features like voice interaction, mood analysis via webcam, and real-time coping tools.
+                    </p>
 
                 </div>
             </div>
-            
+
         </section>
 
         <!--=============== TEAM ===============-->
@@ -187,7 +206,8 @@
             <div class="team">
                 <div class="card">
                     <div class="card--border">
-                        <img src="{{ url_for('static' , filename='images/suraj.jpg') }}" alt="card image" class="card--img">
+                        <img src="{{ url_for('static' , filename='images/suraj.jpg') }}" alt="card image"
+                            class="card--img">
                     </div>
                     <h3 class="card--name">Suraj Kumar Yadav</h3>
                     <span class="card--profession">Data Engineer</span>
@@ -208,7 +228,7 @@
                                     class="card--social-link">
                                     <i class="ri-linkedin-line"></i>
                                 </a>
-                                <a href="" target="_blank" class="card--social-link">
+                                <a href="https://github.com/123suraj-sky" target="_blank" class="card--social-link">
                                     <i class="ri-github-line"></i>
                                 </a>
                             </ul>
@@ -217,7 +237,8 @@
                 </div>
                 <div class="card">
                     <div class="card--border">
-                        <img src="{{ url_for('static' , filename='images/piyush.jpg') }}" alt="card image" class="card--img">
+                        <img src="{{ url_for('static' , filename='images/piyush.jpg') }}" alt="card image"
+                            class="card--img">
                     </div>
                     <h3 class="card--name">Piyush Kumar Seth</h3>
                     <span class="card--profession">Backend Developer</span>
@@ -230,7 +251,8 @@
 
                             <span class="card--social-text">Reach Me</span>
                             <ul class="card--social-list">
-                                <a href="https://www.instagram.com/piyushseth55?igsh=MXYwNnpnZzU4MGVyaw==" target="_blank" class="card--social-link">
+                                <a href="https://www.instagram.com/piyushseth55?igsh=MXYwNnpnZzU4MGVyaw=="
+                                    target="_blank" class="card--social-link">
                                     <i class="ri-instagram-line"></i>
                                 </a>
                                 <a href="https://www.linkedin.com/in/piyush-seth-646275218/" target="_blank"
@@ -246,7 +268,8 @@
                 </div>
                 <div class="card">
                     <div class="card--border">
-                        <img src="{{ url_for('static' , filename='images/jagannath.jpg') }}" alt="card image" class="card--img">
+                        <img src="{{ url_for('static' , filename='images/jagannath.jpg') }}" alt="card image"
+                            class="card--img">
                     </div>
                     <h3 class="card--name">Jagannath Nayak</h3>
                     <span class="card--profession">Full Stack Developer</span>
@@ -276,7 +299,8 @@
                 </div>
                 <div class="card">
                     <div class="card--border">
-                        <img src="{{ url_for('static' , filename='images/shravan.jpg') }}" alt="card image" class="card--img">
+                        <img src="{{ url_for('static' , filename='images/shravan.jpg') }}" alt="card image"
+                            class="card--img">
                     </div>
                     <h3 class="card--name">Shravan Choudhary</h3>
                     <span class="card--profession">Frontend Developer</span>
@@ -290,8 +314,7 @@
                             <span class="card--social-text">Reach Me</span>
                             <ul class="card--social-list">
                                 <a href="https://www.instagram.com/_s_for_shravan/
-                                " target="_blank"
-                                    class="card--social-link">
+                                " target="_blank" class="card--social-link">
                                     <i class="ri-instagram-line"></i>
                                 </a>
                                 <a href="www.linkedin.com/in/shravan-choudhary-614902286" target="_blank"
@@ -348,7 +371,7 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="{{ url_for('static', filename='script/index.js') }}"></script>
-    <div id='toastNotif' class='tNtf'></div> 
+    <div id='toastNotif' class='tNtf'></div>
 </body>
 
 </html>

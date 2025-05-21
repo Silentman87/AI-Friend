@@ -120,6 +120,16 @@ For any inquiries or collaboration ideas, feel free to reach out:
 
 ---
 
+## 👥 Team Members
+
+- **[Suraj Kumar Yadav](https://github.com/123suraj-sky)** – Data Engineer  
+- **[Piyush Kumar Seth](https://github.com/Piyushseth55)** – Backend Developer  
+- **[Jagannath Nayak](https://github.com/jagsbit)** – Full Stack Developer  
+- **[Shravan Choudhary](https://github.com/Silentman87)** – Frontend Developer
+
+
+---
+
 ## 📄 License
 
 This project is open-source and available under the MIT License.
